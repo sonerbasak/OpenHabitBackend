@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="OpenHabitBackend.Business/OpenHabitBackend.Business.csproj" />
+  <Project Path="OpenHabitBackend.Controller/OpenHabitBackend.Controller.csproj" />
+  <Project Path="OpenHabitBackend.Core/OpenHabitBackend.Core.csproj" />
+  <Project Path="OpenHabitBackend.Data/OpenHabitBackend.Data.csproj" />
+</Solution>
