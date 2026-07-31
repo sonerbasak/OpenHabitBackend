@@ -1,0 +1,15 @@
+# .NET Build / Compiled folders
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio / VS Code workspace files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userprefs
+*.lock.json
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
