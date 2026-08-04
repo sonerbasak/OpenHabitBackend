@@ -10,5 +10,6 @@ namespace OpenHabitBackend.Data.Context
         }
 
         public DbSet<Habit> Habits { get; set; }
+        public DbSet<User> Users { get; set; }  
     }
 }

@@ -11,10 +11,21 @@ namespace OpenHabitBackend.Data.Context
             using (var context = new HabitDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<HabitDbContext>>()))
             {
-                if (context.Habits.Any())
+                if (context.Habits.Any() || context.Users.Any())
                 {
                     return;
                 }
+
+                context.Users.AddRange(
+                    new User 
+                    { 
+                        Id = 1, 
+                        Username = "sonerbasak", 
+                        Email = "soner@example.com", 
+                        PasswordHash = "hashed_password_123", // Gerçek projelerde burası şifrelenerek saklanır
+                        CreatedDate = DateTime.Now 
+                    }
+                );
 
                 context.Habits.AddRange(
                     new Habit { Id = 1, Title = "Kitap Okumak", Description = "Günde 20 sayfa", IsCompleted = false, CreatedDate = DateTime.Now, UpdatedDate = null },
